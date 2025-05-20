@@ -1,0 +1,102 @@
+/* style.css */
+
+/* Variáveis de cor (mantidas) */
+:root {
+    --color-background-body: #f4f4f4;
+    --color-background-header: #007bff;
+    --color-background-container: #fff;
+    --color-background-footer: #333; 
+
+    --color-text-header-title: white;
+    --color-text-header-subtitle: #e9ecef;
+    --color-text-dark: #333; 
+    --color-text-muted: #555;
+    --color-text-light: #e9ecef; 
+    --color-text-accent: #007bff; 
+
+    --color-border-light: #ccc;
+
+    --color-primary: #007bff; 
+    --color-primary-dark: #0056b3; 
+
+    --shadow-light: rgba(0, 0, 0, 0.1);
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--color-background-body);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+header {
+    background-color: var(--color-background-header);
+    color: var(--color-text-header-title);
+    padding: 20px;
+    text-align: center;
+}
+
+
+.base-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background-color: var(--color-background-container);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--shadow-light);
+    max-width: 600px;
+    width: 100%;
+}
+
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--color-border-light);
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: vertical;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+
+.counters {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.counters p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--color-text-dark);
+}
+
+.counters span {
+    font-weight: bold;
+    color: var(--color-primary-dark);
+}
+
+
+footer {
+    background-color: var(--color-background-footer);
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 15px 10px;
+}
+
+footer span {
+    font-weight: bold;
+}

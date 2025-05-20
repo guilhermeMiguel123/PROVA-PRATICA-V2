@@ -1,0 +1,143 @@
+/* Definição das Variáveis de Cor */
+:root {
+    --color-bg-body: #e9ecef; 
+    --color-white: #FFFFFF;
+    --color-primary: #007bff;
+
+    --shadow-light: rgba(0, 0, 0, 0.1); 
+    --shadow-medium: rgba(0, 0, 0, 0.1);
+
+    --color-text-subtle-light: #e9ecef; 
+    --color-text-dark: #333; 
+    --color-text-muted: #555; 
+
+    --color-bg-footer: #333; 
+
+    --color-border-light: #ccc;
+    --color-border-subtle: #eee; 
+
+    --color-button-success: #28a745; 
+    --color-button-success-hover: #218838;
+
+    --color-bg-error: #c82333; 
+
+    /* Cores para as classificações de IMC */
+    --color-text-imc-low: #ffc107; /* Amarelo */
+    --color-text-imc-normal: #28a745; /* Verde */
+    --color-text-imc-overweight: #fd7e14; /* Laranja */
+    --color-text-imc-obese: #dc3545; /* Vermelho */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg-body);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.base-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.container {
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--shadow-light);
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input[type="number"] {
+    padding: 10px;
+    border: 1px solid var(--color-border-light);
+    border-radius: 5px;
+    width: 100%;
+}
+
+button#calcular-btn {
+    background-color: var(--color-button-success);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button#calcular-btn:hover {
+    background-color: var(--color-button-success-hover);
+}
+
+#resultado {
+    padding: 15px;
+    border: 1px solid var(--color-border-light);
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.resultado-baixo {
+    color: var(--color-text-imc-low);
+}
+
+.resultado-normal {
+    color: var(--color-text-imc-normal);
+}
+
+.resultado-sobre {
+    color: var(--color-text-imc-overweight);
+}
+
+.resultado-obesidade {
+    color: var(--color-text-imc-obese);
+}
+
+#erro-messagem {
+    background-color: var(--color-bg-error);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    text-align: center;
+}
+
+footer {
+    background-color: var(--color-bg-footer);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+footer span {
+    font-weight: bold;
+}
